@@ -129,3 +129,9 @@ As required by the exercise, this repository also includes `CLAUDE.md`
 (project instructions given to the AI assistant) and `AI_REFLECTION.md`
 (a reflection on the collaboration). See those files, and their headers,
 for a note on the `.claude/` and `ai/` folders.
+
+Development — the code, tests, and documentation — was done with Claude
+(Claude.ai chat). Windsurf/VS Code was used only as a local editor to run
+and manually verify the solution (running `pytest`, running the CLI, and
+reading the output), not for any AI-assisted changes, so it has no
+collaboration artifacts of its own here.
