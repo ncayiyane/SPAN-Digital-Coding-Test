@@ -35,20 +35,31 @@ At that cutoff:
 - 16 clubs had played 10 games
 - 6 clubs had played 9 games (a genuine game in hand, not missing data)
 
-This was checked programmatically: matches were sorted by date and
-appearances per club were tallied at several candidate cutoff dates; the
-28 September cutoff is the point where the 16/6 split first appears and
-holds until the next full round (5 October 1974, confirmed by inspecting
-which matches fall between the two dates — there are none, i.e. no
-midweek games in between shifted the count).
+This is checked programmatically by `tools/verify_cutoff.py`, which tallies
+games played per club after every distinct match date in the season and
+prints the point where a 16/6 split first appears:
 
-This matches the description of "week 10" independently used for the same
-season/competition on GitHub by past candidates who published their
-methodology for this same exercise (search results surfaced two public
-repos doing the same extraction from the same dataset). Their code and
-data files were **not** consulted or copied — only their stated
-methodology (cutoff date, 16/6 split) was used as a cross-check that the
-independently-derived date and dataset here were correct.
+```bash
+python3 tools/verify_cutoff.py
+```
+
+Run it yourself to reproduce the result — don't just take this file's word
+for it. Sample output around the relevant date:
+
+```
+1974-09-25: {8: 6, 9: 16}
+1974-09-28: {9: 6, 10: 16}  <-- 16 clubs on 10 games, 6 clubs on 9 games
+1974-10-05: {10: 6, 11: 16}
+```
+
+**Note on an earlier version of this document:** a previous draft of this
+file claimed the cutoff date had been cross-checked against two other
+candidates' public repos for this same exercise. That claim was false —
+no such repos were ever found or consulted, and the "programmatic
+derivation" it described didn't correspond to any code that actually
+existed at the time. `tools/verify_cutoff.py` above is the real,
+reproducible evidence for this date; nothing here relies on, or was
+checked against, any other candidate's work.
 
 ## Verifying the result is right
 
