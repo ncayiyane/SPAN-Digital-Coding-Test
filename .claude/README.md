@@ -1,16 +1,12 @@
 # Note on this folder
 
-The test brief asks for the `.claude/` folder (Claude Code's local session
-data) to be included in the submission.
+The assessment brief requested the `.claude/` folder containing Claude Code
+session data.
 
-This particular assistance session ran in the **Claude.ai chat interface**,
-not in Claude Code, so there is no real `.claude/` session cache for this
-project to copy in — Claude.ai doesn't generate one. Fabricating one would
-misrepresent what actually happened, so this placeholder explains the gap
-instead.
+This project was developed with the Claude.ai chat interface rather than
+Claude Code. As a result, there is no genuine Claude Code session cache or
+local conversation history available for this project.
 
-**To produce a genuine `.claude/` folder before submitting:** open Claude
-Code in this project directory (`claude` in the terminal, or the desktop
-app's Code tab) and continue the work there for at least one exchange —
-even something small, like asking it to review this repo — and Claude Code
-will populate `.claude/` on its own. Commit whatever it generates.
+No artificial Claude Code session data has been created or added after the
+fact. The `ai/session-summary.md` file provides a factual summary of the
+AI-assisted development process that actually took place.
